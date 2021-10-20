@@ -1,5 +1,6 @@
 from Util import materialType
 
+# vibranium is specific to Steve's car
 materialType = Enum('Titanium', 'Carbon', 'Vibranium')
 
 class MaterialManager:
