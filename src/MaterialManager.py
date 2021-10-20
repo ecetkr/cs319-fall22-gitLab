@@ -1,5 +1,6 @@
 from Util import materialType
 
+materialType = Enum('Titanium', 'Carbon', 'Vibranium')
 
 class MaterialManager:
 
@@ -19,10 +20,15 @@ class MaterialManager:
                 self.carManager.setMaterial(materialType.Carbon)
                 returnText = "Material is changed to Carbon."
 
+            case materialType.Vibranium:
+                self.carManager.setMaterial(materialType.Vibranium)
+                returnText = "Material is changed to Vibranium."
+
             case _:
-                returnText = "Material seletion is invalid."
+                returnText = "Material selection is invalid."
 
         return self._announceMaterial(returnText)
+
 
     def _announceMaterial(self, text: str) -> bool:
    returnValue = False
